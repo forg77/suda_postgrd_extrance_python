@@ -6,17 +6,18 @@ def check(L):
     L.sort()
     lenl = len(L)
     fail = True
-    for i in range(lenl-4):
+    for i in range(lenl - 4):
         for j in range(4):
-            if L[i+j] + 1 != L[i+j+1]:
+            if L[i + j] + 1 != L[i + j + 1]:
                 break
             if j == 3:
                 fail = False
 
     return not fail
 
+
 if __name__ == '__main__':
     while True:
-        L = input().split() #5 2 3 4 6 0
+        L = input().split()  # 5 2 3 4 6 0
         L1 = [int(item) for item in L]
         print(check(L1))
